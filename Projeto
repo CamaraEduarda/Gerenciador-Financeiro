@@ -1,11 +1,7 @@
-public interface Funcionalidades {
-    
-    void Create();
+Crie um sistema de gerenciamento financeiro, que possibilite ao usuário gerenciar despesas, receitas e categorizá-las.
 
-    Transacao Retrieve();
+Desafios adicionais (opcionais):
 
-    void Update();
-
-    void Delete();
-
-}
+(3 pontos) Gere relatórios que devem ser salvos em arquivos de texto
+(4 pontos) Crie a funcionalidade de filtrar despesas ou receitas por categorias, valor e outros critérios
+(8 pontos) Permita a criação de orçamentos, com alertas para quando esses orçamentos forem atingidos ou estiverem próximos de serem atingidos.
