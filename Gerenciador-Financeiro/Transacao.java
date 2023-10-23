@@ -1,4 +1,4 @@
-public class Transacao implements Funcionalidades{
+public abstract class Transacao {
     
     private String descricao;
     private double valor;
@@ -22,38 +22,6 @@ public class Transacao implements Funcionalidades{
         return categoria;
     }
 
-    public void setDescricao(String descricao) {
-        this.descricao = descricao;
-    }
-
-    @Override
-    public String toString() {
-        return "Transacao [descricao=" + descricao + ", valor=" + valor + ", categoria=" + categoria + "]";
-    }
-
-    @Override
-    public void Create() {
-        
-    }
-
-    @Override
-    public Transacao Retrieve() {
-        // TODO Auto-generated method stub
-        throw new UnsupportedOperationException("Unimplemented method 'Retrieve'");
-    }
-
-    @Override
-    public void Update() {
-        // TODO Auto-generated method stub
-        throw new UnsupportedOperationException("Unimplemented method 'Update'");
-    }
-
-    @Override
-    public void Delete() {
-        // TODO Auto-generated method stub
-        throw new UnsupportedOperationException("Unimplemented method 'Delete'");
-    }
-
-
-
+    abstract void Criar();
+   
 }
