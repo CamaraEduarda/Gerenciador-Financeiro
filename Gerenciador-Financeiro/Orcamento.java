@@ -2,12 +2,12 @@ public class Orcamento {
     
     private String categoria;
     private double valor;
-    private double limite;
+    private double alerta;
 
-    public Orcamento(String categoria, double valor, double limite) {
+    public Orcamento(String categoria, double valor, double alerta) {
         this.categoria = categoria;
         this.valor = valor;
-        this.limite = limite;
+        this.alerta = alerta;
     }
     
     public String getCategoria() {
@@ -18,8 +18,8 @@ public class Orcamento {
         return valor;
     }
 
-    public double getLimite() {
-        return limite;
+    public double getAlerta() {
+        return alerta;
     }
 
 
