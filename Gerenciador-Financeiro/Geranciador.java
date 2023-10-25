@@ -2,6 +2,7 @@ import java.io.FileWriter;
 import java.io.IOException;
 import java.io.PrintWriter;
 import java.util.ArrayList;
+import java.util.List;
 
 
 public class Geranciador {
@@ -34,7 +35,22 @@ public class Geranciador {
         }
     }
 
-    public void filtrar(Object filtro){
+
+
+    public void filtrarPorValor(String tipo, double valor, int opcao){
+        if (opcao == 1) {
+             List<Transacao> filtro1 = transacoes.stream().filter(transacoes -> transacoes.getCategoria().equals(tipo) && transacoes.getValor() >= valor).toList();
+        } else if (opcao == 2) {
+            List<Transacao> filtro1 = transacoes.stream().filter(transacoes -> transacoes.getCategoria().equals(tipo) && transacoes.getValor() <= valor).toList();
+        }
+       
+    }
+
+
+
+// precisa usar enum
+
+    public void filtrarCategoria(Object filtro){
         for (Transacao transacao : transacoes) {
             if (transacao.getCategoria().equals(filtro)) {
                 System.out.println(transacao);

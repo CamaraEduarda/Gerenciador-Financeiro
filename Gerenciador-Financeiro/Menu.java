@@ -4,7 +4,7 @@ public class Menu  {
     public static void main(String[] args) throws AlertaException {
 
         Geranciador geranciador = new Geranciador();
-        Scanner sc = new Scanner("System.in");
+        Scanner sc = new Scanner(System.in);
         
 
             while (true) {
@@ -99,24 +99,35 @@ public class Menu  {
                         System.out.println("\t Escolha pelo que você deseja filtrar:");
                         System.out.println("1) Categoria");
                         System.out.println("2) Valor");
-                        System.out.println("3) Descrição");
+                
                         int escolha = sc.nextInt();
 
                         if (escolha == 1) {
                             System.out.println("Digite a categoria que você deseja filtrar: ");
                             String categoriaFiltrar = sc.nextLine();
-                            geranciador.filtrar(categoriaFiltrar);
+                           
 
                         } else if (escolha == 2) {
+                            System.out.println("Digite o que você deseja filtrar: ");
+                            String tipo = sc.nextLine();
+
                             System.out.println("Digite o valor que você deseja filtrar: ");
                             double valorFiltrar = sc.nextDouble();
-                            geranciador.filtrar(valorFiltrar);
 
+                            System.out.println("Como a filtragem deve ser ? ");
+                            System.out.println("1) Valores >= "+valorFiltrar+" ?");
+                            System.out.println("2) Valores <= "+valorFiltrar+" ?");
+                            int opcao = sc.nextInt();
+                            geranciador.filtrarPorValor(tipo, valorFiltrar, opcao);
+                                   
+                            
+
+                        /*
                         } else if (escolha == 3) {
                             System.out.println("Digite a descrição que você deseja filtrar: ");
                             String descricaoFiltrar = sc.nextLine();
                             geranciador.filtrar(descricaoFiltrar);
-
+                        */
                         } else {
                             System.out.println("Opção inválida!");
                         }
