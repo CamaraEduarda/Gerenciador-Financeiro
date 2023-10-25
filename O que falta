@@ -1,4 +1,27 @@
+- Filtrar (feito)
+
+- Salvar (feito)
+  - método criar(classe Transação)
+
+- Gerar relátorios (feito)
+
+- Criar orçamentos (feito)
+
+
+-----------------------------------------------------
+
+- Criar exceções para orçamentos
+    - limite atingido
+    - próximo de atingir limite
+
 - Filtrar
-- Salvar
-- Gerar relátorios
-- Criar orçamentos
+  - filtrar por categoria
+  - filtrar por valor
+  - filtrar por descrição
+
+  - filtrar por outros critérios
+
+
+
+
+
